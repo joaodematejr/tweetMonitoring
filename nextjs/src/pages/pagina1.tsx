@@ -1,21 +1,17 @@
-// @flow
 import { GetServerSideProps, NextPage } from "next";
-import * as React from "react";
-type Props = {};
-type State = {};
 
-const Pagina1Page: NextPage = () => {
-  return (
-    <div>
-      <h1>Ola Mundo</h1>
-    </div>
-  );
+type Pagina1PageProps = {
+    name: string;
+}
+
+const Pagina1Page: NextPage<Pagina1PageProps> = (props) => {
+  return <h1>Hello World!! {props.name}</h1>;
 };
 
-const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
-      name: "João Dematé",
+      name: "Full Cycle",
     },
   };
 };

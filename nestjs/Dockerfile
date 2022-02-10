@@ -4,4 +4,4 @@ RUN npm install -g @nestjs/cli@8.0.0
 
 USER node
 
-WORKDIR /Users/joaodematejr/Documents/Github/tweetMonitoring/nestjs
+WORKDIR /home/node/app
